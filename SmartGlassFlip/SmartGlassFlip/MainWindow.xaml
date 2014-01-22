@@ -1,0 +1,34 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:userControls="clr-namespace:SmartGlassFlip.UserControls"
+    xmlns:controls="http://schemas.awesomium.com/winfx"
+    mc:Ignorable="d" x:Class="SmartGlassFlip.MainWindow"
+        Title="MainWindow" Height="600" Width="525">
+    
+    <Grid>
+
+        <userControls:FlipControl x:Name="uxFlipControlImage" Width="300" Height="300" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <userControls:FlipControl.FrontContent>
+                <Image Source="resources/images/example.jpg" Stretch="Uniform" />
+            </userControls:FlipControl.FrontContent>
+            <userControls:FlipControl.BackContent>
+                <Image Source="resources/images/example.jpg" Stretch="Uniform" />
+            </userControls:FlipControl.BackContent>
+        </userControls:FlipControl>
+
+        <!--<userControls:FlipControl x:Name="uxFlipControlBrowser" 
+                                  Width="300" Height="300" VerticalAlignment="Center" Margin="17,84,0,185" HorizontalAlignment="Left">
+            <userControls:FlipControl.FlipContent>
+                <controls:WebControl Width="300" Height="300" Source="http://www.google.com"  />
+            </userControls:FlipControl.FlipContent>
+        </userControls:FlipControl>-->
+
+        <Button VerticalAlignment="Center" HorizontalAlignment="Center" Width="50" Height="20" Margin="-60,250,0,0" 
+			Content="Flip right" Click="FlipRightClick"/>
+
+        <Button VerticalAlignment="Center" HorizontalAlignment="Center" Width="50" Height="20" Margin="60,250,0,0" 
+			Content="Flip left" Click="FlipLeftClick"/>
+    </Grid>
+</Window>
